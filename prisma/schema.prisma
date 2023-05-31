@@ -11,11 +11,9 @@ datasource db {
 }
 
 model User {
-  id String @id
-
-  messages      Int @default(0)
-  messagesToday Int @default(0)
-
-  characters      Int @default(0)
-  charactersToday Int @default(0)
+  id              String @id
+  messages        Int    @default(0)
+  messagesToday   Int    @default(0)
+  characters      Int    @default(0)
+  charactersToday Int    @default(0)
 }
