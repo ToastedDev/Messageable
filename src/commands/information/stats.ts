@@ -1,4 +1,5 @@
 import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
+import { colors } from "../../consts.js";
 import { Command } from "../../structures/Command.js";
 
 export default new Command({
@@ -33,11 +34,12 @@ export default new Command({
           .setDescription(
             [
               `**Messages**: ${data.messages.toLocaleString()}`,
-              `<:reply:1113429418099081296> **Today**: ${data.messagesToday.toLocaleString()}`,
+              `↪ **Today**: ${data.messagesToday.toLocaleString()}`,
               `**Characters**: ${data.characters.toLocaleString()}`,
-              `<:reply:1113429418099081296> **Today**: ${data.charactersToday.toLocaleString()}`,
+              `↪ **Today**: ${data.charactersToday.toLocaleString()}`,
             ].join("\n")
-          ),
+          )
+          .setColor(colors.primary),
       ],
       ephemeral: true,
     });

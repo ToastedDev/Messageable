@@ -20,7 +20,7 @@ export default new Event({
       channel.send({
         embeds: [
           new EmbedBuilder()
-            .setTitle("Messages sent (THIS IS A TEST REPORT)")
+            .setTitle("Messages sent in the last day")
             .setDescription(
               users
                 .sort((a, z) => z.messagesToday - a.messagesToday)
