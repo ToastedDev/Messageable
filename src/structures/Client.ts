@@ -1,5 +1,8 @@
 import { PrismaClient } from "@prisma/client";
-import type { ApplicationCommandDataResolvable, ClientOptions } from "discord.js";
+import type {
+  ApplicationCommandDataResolvable,
+  ClientOptions,
+} from "discord.js";
 import { Client, Collection, GatewayIntentBits, Partials } from "discord.js";
 import fs from "fs";
 import path from "path";
@@ -21,7 +24,7 @@ export class BotClient<Ready extends boolean = boolean> extends Client<Ready> {
         GatewayIntentBits.Guilds,
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.MessageContent,
-        GatewayIntentBits.GuildMessageReactions,
+        GatewayIntentBits.GuildMembers,
       ],
       partials: [Partials.Message, Partials.Reaction, Partials.User],
       ...options,
