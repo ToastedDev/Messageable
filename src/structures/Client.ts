@@ -4,8 +4,8 @@ import { Client, Collection, GatewayIntentBits, Partials } from "discord.js";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { env } from "../utils/env";
-import type { CommandData } from "./Command";
+import { env } from "../utils/env.js";
+import type { CommandData } from "./Command.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
