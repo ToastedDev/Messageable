@@ -32,6 +32,9 @@ export default new Event({
                 )
                 .join("\n")
             )
+            .setFooter({
+              text: `Total messages today: ${users.reduce((a, b) => a + b.messagesToday, 0).toLocaleString()}`
+            })
             .setTimestamp()
             .setColor(colors.primary),
         ],
