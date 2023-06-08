@@ -23,6 +23,7 @@ export default new Event({
             .setTitle("Messages sent in the last day")
             .setDescription(
               users
+                .filter((user) => channel.guild.members.cache.get(user.id))
                 .sort((a, z) => z.messagesToday - a.messagesToday)
                 .map(
                   (user) =>
