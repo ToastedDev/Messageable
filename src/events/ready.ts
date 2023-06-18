@@ -59,7 +59,7 @@ export default new Event({
 
     new CronJob("0 * * * *", createHourlyReport, null, true, "Africa/Abidjan");
     async function createHourlyReport() {
-      const channel = await client.channels.fetch("1113632965000429749");
+      const channel = await client.channels.fetch("1119832277573173358");
       if (!channel || !channel.isTextBased() || channel.isDMBased()) return;
 
       await channel.guild.members.fetch();
