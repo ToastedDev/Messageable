@@ -49,7 +49,6 @@ export default new Event({
             id: user.id,
           },
           data: {
-            messagesHourly: 0,
             messagesToday: 0,
             charactersToday: 0,
           },
